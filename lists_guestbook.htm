@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{eyou:global name='web_title' /}</title>
+    <meta name="description" content="{eyou:global name='web_description' /}" />
+    <meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+    <link
+      href="{eyou:global name='web_ico' /}"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+
+    <!--引用百度地图API-->
+    <script
+      type="text/javascript"
+      src="http://api.map.baidu.com/api?v=2.0&ak=UG4ZEr27koQQ8uowIou1OoQTT0QhjBX2"
+    ></script>
+    <title>Document</title>
+
+    <!-- incon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/font-awesome/5.6.3/css/all.min.css"
+    />
+
+    <!-- animated -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Tooltip -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/animations/scale.css"
+    />
+
+    <!-- Css -->
+    {eyou:static file="style/css/contact.css"}
+  </head>
+  <body>
+    {eyou:include file="header.htm" /}
+
+    <header class="header">
+      <img
+        src="{eyou:global name='web_templets_pc' /}/style/images/contact.jpg"
+        alt=""
+        class="header__img img-fulid"
+      />
+    </header>
+
+    <section class="map py-5 js--section-features" id="map_1">
+      <div class="container">
+        <div class="row">
+          <div class="col-customize">
+            <div class="map__left p-xl-4 p-2 mb-xl-0 mb-1">
+              <div class="heading">
+                <div class="heading__main">苏州通玧生态科技有限公司</div>
+              </div>
+              <div class="content mt-xl-3 mt-2">
+                微信： 17715884902 <br />
+                电子邮件： <br />
+                niniyao@cgfitness.cn <br />
+                cloudgroup2010@gmail.com <br />
+                邮编：215008
+              </div>
+              <div class="qrcode mt-xl-3 mt-2">
+                <img
+                  src="{eyou:global name='web_templets_pc' /}/style/images/Wechat.jpeg"
+                  alt=""
+                />
+                <img
+                  src="{eyou:global name='web_templets_pc' /}/style/images/whatsapp.jpeg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-customize">
+            <!--百度地图容器-->
+            <div
+              style="
+                width: 100%;
+                height: 400px;
+                border: #ccc solid 1px;
+                font-size: 12px;
+              "
+              id="map"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <span id="test"></span>
+    </section>
+    <section class="message py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-1-of-2">
+            {eyou:guestbookform type='default'}
+            <form
+              class="mt-xl-5 mt-3 text-left"
+              method="POST"
+              action="{$field.action}"
+              {$field.formhidden}
+            >
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="姓名"
+                  id="attr_26"
+                  name="{$field.attr_26}"
+                  required
+                />
+              </div>
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-hand-pointer"></i>
+                  </div>
+                </div>
+                <div class="form-control d-flex align-items-center">
+                  {eyou:volist name='$field.options_43' id='vo'}
+                  <label
+                    ><input
+                      type="radio"
+                      id="attr_43"
+                      name="{$field.attr_43}"
+                      value="{$vo.value}"
+                    />
+                    <span class="pr-1" style="color: #495057; font-size: 13px">
+                      {$vo.value}
+                    </span>
+                  </label>
+                  {/eyou:volist}
+                </div>
+                <!-- <input type="text" class="form-control" placeholder="Name" id='attr_26' name='{$field.attr_26}' required> -->
+              </div>
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-building"></i>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="公司"
+                  id="attr_41"
+                  name="{$field.attr_41}"
+                />
+              </div>
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="邮箱"
+                  id="attr_27"
+                  name="{$field.attr_27}"
+                  required
+                />
+              </div>
+
+              <!-- <div class="input-group mb-xl-3 mb-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id='attr_28' name='{$field.attr_28}' placeholder="Message" rows="10"></textarea>
+                        </div> -->
+              <button type="text" value="sbumit">提交</button>
+              {$field.hidden}
+            </form>
+            {/eyou:guestbookform}
+          </div>
+          <div class="col-1-of-2">
+            <div class="message__window">
+              <div class="message__overlay">
+                <img
+                  src="{eyou:global name='web_templets_pc' /}/style/images/company.jpg"
+                  class="img-fulid message__img"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {eyou:include file="footer.htm" /}
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Slick -->
+    <!-- <script src="https://cdn.staticfile.org/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script> -->
+
+    <!-- Fullscreen(全屏) Lightbox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <!-- Waypoint(执行功能)-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Production -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    {eyou:static file="style/js/fslightbox.js"} {eyou:static
+    file="style/js/jquery.js"} {eyou:static file="style/js/oo7items.js"}
+    {eyou:static file="style/js/popper.js"} {eyou:static
+    file="style/js/select.js"}
+
+    <script>
+      //创建和初始化地图函数：
+      function initMap() {
+        createMap(); //创建地图
+        setMapEvent(); //设置地图事件
+        addMapControl(); //向地图添加控件
+        addMapOverlay(); //向地图添加覆盖物
+      }
+      function createMap() {
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(119.99251, 28.894252), 17);
+      }
+      function setMapEvent() {
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom();
+      }
+      function addClickHandler(target, window) {
+        target.addEventListener("click", function () {
+          target.openInfoWindow(window);
+        });
+      }
+      function addMapOverlay() {}
+      //向地图添加控件
+      function addMapControl() {
+        var scaleControl = new BMap.ScaleControl({
+          anchor: BMAP_ANCHOR_BOTTOM_LEFT,
+        });
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({
+          anchor: BMAP_ANCHOR_TOP_LEFT,
+          type: BMAP_NAVIGATION_CONTROL_LARGE,
+        });
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({
+          anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+          isOpen: true,
+        });
+        map.addControl(overviewControl);
+      }
+      var map;
+      initMap();
+
+      // 导航栏样式
+      oo7Ui.clickOnlyAddClass(
+        ".navigation__nav",
+        ".navigation__item",
+        "navigation__active"
+      );
+    </script>
+  </body>
+</html>
