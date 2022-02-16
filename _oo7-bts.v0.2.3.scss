@@ -421,6 +421,12 @@ a {
 //  注意:
 //      标签引入样式名注意格式: btn btn-soild
 @mixin btn-init() {
+  background: none;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 0;
 }
 
 // 4. 按钮类-END
