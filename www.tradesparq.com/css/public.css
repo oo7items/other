@@ -1,0 +1,280 @@
+.yunmaotong-ad-wrapper{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	transform: translateY(100%);
+}
+
+.yunmaotong-ad-wrapper.stay{
+	transform: translateY(0);
+}
+
+.yun-ad-close{
+	width: 20px;
+	height: 20px;
+	background-color: rgba(0,0,0,0.4);
+	text-align: center;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.yun-ad-close>img{
+	width: 16px;
+	height: 16px;
+}
+
+.yunmaotong-ad-img{
+	width: 400px;
+}
+
+.tongzhi-modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 999;
+}
+
+.upgrade-tongzhi,.springFestival-tongzhi{
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	z-index: 999;
+	opacity: 0;
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.6);
+}
+
+.springFestival-tongzhi-login{
+	width: 40%;
+    position: fixed;
+    right: 0px;
+    bottom: 0;
+    transform: translate(0,100%);
+}
+
+div.springFestival-tongzhi-login-stay{
+	transform: translate(0,0);
+}
+
+.springFestival-tongzhi-img{
+	border-radius: 4px 0px 0px 4px;
+}
+
+div.springFestival-tongzhi-stay{
+	top: 42%;
+	opacity: 1;
+}
+.upgrade-tongzhi{
+	background-color: #fff;
+	color: #333;
+	font-size:24px;
+	border-radius: 10px;
+	padding: 20px;
+	overflow: hidden;
+}
+.upgrade-tongzhi .close-btn{
+	background: rgba(0, 0, 0, 0.4);
+	top: -1px;
+	width: 20px;
+}
+
+.slideDown{
+	animation: slideDown 1s;
+	animation-delay: 0.5s;
+}
+
+.slideDown-login{
+	animation: tSlideDown 0.8s;
+}
+
+.slideTop-login{
+	animation: tSlideTop 0.8s;
+	animation-delay:0.5s;
+}
+
+.slideTop{
+	animation:slideTop 1s;
+}
+
+.close-btn{
+	position: absolute;
+	padding: 5px;
+	right: 0px;
+	top: 0px;
+	width: 4%;
+	cursor: pointer;
+}
+
+.close-btn:hover{
+	background: rgba(0,0,0,0.2);
+}
+
+.close-btn-icon{
+	width: 100%;
+}
+
+@keyframes tSlideDown{
+	from{
+		transform:translate(0,0);
+	}
+	to{
+		transform: translate(0,100%);
+	}
+}
+
+@-moz-keyframes tSlideDown{
+	from{
+		transform:translate(0,0);
+	}
+	to{
+		transform: translate(0,100%);
+	}
+}
+@-webkit-keyframes tSlideDown{
+	from{
+		transform:translate(0,0);
+	}
+	to{
+		transform: translate(0,100%);
+	}
+}
+@-o-keyframes tSlideDown{
+	from{
+		transform:translate(0,0);
+	}
+	to{
+		transform: translate(0,100%);
+	}
+}
+
+@keyframes tSlideTop{
+	from{
+		transform: translate(0,100%);
+	}
+	to{
+		transform:translate(0,0);
+	}
+}
+
+@-moz-keyframes tSlideTop{
+	from{
+		transform: translate(0,100%);
+	}
+	to{
+		transform:translate(0,0);
+	}
+}
+@-webkit-keyframes tSlideTop{
+	from{
+		transform: translate(0,100%);
+	}
+	to{
+		transform:translate(0,0);
+	}
+}
+@-o-keyframes tSlideTop{
+	from{
+		transform: translate(0,100%);
+	}
+	to{
+		transform:translate(0,0);
+	}
+}
+
+@keyframes slideDown{
+	from{
+		top:0%;
+		opacity: 0;
+	}
+	to{
+		top: 42%;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slideDown{
+	from{
+		top:0%;
+		opacity: 0;
+	}
+	to{
+		top: 42%;
+		opacity: 1;
+	}
+}
+@-webkit-keyframes slideDown{
+	from{
+		top:0%;
+		opacity: 0;
+	}
+	to{
+		top: 42%;
+		opacity: 1;
+	}
+}
+@-o-keyframes slideDown{
+	from{
+		top:0%;
+		opacity: 0;
+	}
+	to{
+		top: 42%;
+		opacity: 1;
+	}
+}
+
+@keyframes slideTop{
+	form{
+		top: 42%;
+		opacity: 1;
+	}
+
+	to{
+		top: 0%;
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes slideTop{
+	form{
+		top: 42%;
+		opacity: 1;
+	}
+
+	to{
+		top: 0%;
+		opacity: 0;
+	}
+}
+@-webkit-keyframes slideTop{
+	form{
+		top: 42%;
+		opacity: 1;
+	}
+
+	to{
+		top: 0%;
+		opacity: 0;
+	}
+}
+@-o-keyframes slideTop{
+	form{
+		top: 42%;
+		opacity: 1;
+	}
+
+	to{
+		top: 0%;
+		opacity: 0;
+	}
+}
+
+
