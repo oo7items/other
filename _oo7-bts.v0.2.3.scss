@@ -57,6 +57,14 @@ a {
 
 // 0. 防出错类-END
 
+@mixin make-container($w: 1200px) {
+  max-width: $w !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 // 1. flex函数类-BGN
 // 1-0. 开启弹性布局,有兼容性
 //	用法:
