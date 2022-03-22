@@ -1,0 +1,19 @@
+//////////////////////////////////////////////// 2022.3.7
+/*
+  固定宽度, 文字两端对齐
+*/
+.label {
+  width: 150px;
+  // 文本两端对齐
+  text-align: justify;
+  // 两端对齐行的方式与distribute相同，也同样不包含两段对齐段落的最后一行。适用于表意字文档
+  text-justify: distribute-all-lines;
+  // 文本最后一行两边对齐
+  text-align-last: justify;
+}
+
+/*
+linke visit active foucus
+*/
+
+// X::pseudoElement 定位段落的第一个字母
